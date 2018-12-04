@@ -14,7 +14,7 @@ class MessageController extends Controller
     public function sendMessage()
     {
         $username = 'Nick';
-        $message = 'Laravel with pusher 3.0 test.';
+        $message = 'laravel 5.1 & pusher 3.0';
         $user = [
             'id' => 10001,
             'username' => $username,
