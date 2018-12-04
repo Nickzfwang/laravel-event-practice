@@ -10,6 +10,7 @@ use App\User;
 
 class MessageController extends Controller
 {
+    // use pusher send message
     public function sendMessage()
     {
         $username = 'Nick';
@@ -21,12 +22,13 @@ class MessageController extends Controller
         event(new SendMessage($user, $message));
         return 'message sent';
     }
-
+    // with pushId get message
     public function getMessage()
     {
         $memberId = 10001;
         return view('push')->with(compact('memberId'));
     }
+    // get user info
     public function getUserInfo()
     {
         $data = User::find(1)->first();
